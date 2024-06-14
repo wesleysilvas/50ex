@@ -8,6 +8,7 @@ d) Quantos valores são pares.*/
 const prompt = require('prompt-sync')()
 
 function analisarNumeros() {
+    
     let menor, resposta
     let qtd_par = 0
     let somatorio = 0

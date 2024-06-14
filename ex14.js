@@ -4,10 +4,18 @@ que eles foram informados.*/
 
 const prompt = require('prompt-sync')()
 
-function listaDeNomes(){
-let nomes = [nome]
+function listaDeNomes() {
+    
+    let nomes = []
 
+    for (let i = 1; i <= 7; i++) {
+        let nome = prompt("Informe o seu nome: ")
+        nomes.push(nome)
+    }
 
+    for (i = nomes.length - 1; i >= 0; i--) {
+        console.log(nomes[i])
+    }
 }
 
 listaDeNomes()

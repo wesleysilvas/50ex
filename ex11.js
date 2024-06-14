@@ -5,6 +5,7 @@ valores da sequência.*/
 const prompt = require('prompt-sync')()
 
 function progressaoAritmetica() {
+  
   const a1 = parseFloat(prompt('Informe o primeiro termo da PA: '))
   const razao = parseFloat(prompt('Informe a razão da PA: '))
 

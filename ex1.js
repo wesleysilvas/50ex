@@ -3,9 +3,18 @@ Pergunte a quantidade de cigarros fumados por dias e quantos anos ele já fumou.
 Considere que um fumante perde 10 min de vida a cada cigarro. Calcule quantos dias de
 vida um fumante perderá e exiba o total em dias.*/
 
-let qtdCigarros = parseInt(prompt("Informe a quantidade de cigarro por dia: "))
-let tempo = parseInt(prompt("Há quanto tempo você fuma? "))
+const prompt = require('prompt-sync')()
 
-dias = tempo/12/30
-minutosPerdidos_dia = 10*qtdCigarros*dias
+function calcularPerdaDeVida() {
+  const cigarrosPorDia = parseInt(prompt('Quantos cigarros você fuma por dia? '))
+  const anosFumando = parseInt(prompt('Há quantos anos você fuma? '))
 
+  const minutosPerdidosPorDia = cigarrosPorDia * 10
+  const diasFumando = anosFumando * 365
+  const minutosPerdidosTotal = minutosPerdidosPorDia * diasFumando
+  const diasPerdidos = minutosPerdidosTotal / 1440
+
+  console.log(`Você perderá aproximadamente ${diasPerdidos.toFixed(2)} dias de vida.`)
+}
+
+calcularPerdaDeVida()
